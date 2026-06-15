@@ -1,8 +1,9 @@
-name: Build & Deploy
+name: Build & Push
 
 on:
   push:
-    branches: [main]
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
 
 jobs:
   build-and-push:
@@ -29,26 +30,4 @@ jobs:
           push: true
           tags: |
             ghcr.io/tomeng99/portfolio:latest
-            ghcr.io/tomeng99/portfolio:${{ github.sha }}
-
-  update-ops:
-    needs: build-and-push
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout operations repo
-        uses: actions/checkout@v4
-        with:
-          repository: tomeng99/operations
-          ssh-key: ${{ secrets.OPS_DEPLOY_KEY }}
-          path: operations
-
-      - name: Update image tag
-        run: |
-          cd operations
-          sed -i "s|ghcr.io/tomeng99/portfolio:.*|ghcr.io/tomeng99/portfolio:${{ github.sha }}|" apps/portfolio/prod/deployments.yaml
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add apps/portfolio/prod/deployments.yaml
-          git commit -m "chore: update portfolio image to ${{ github.sha }}"
-          git push
+            ghcr.io/tomeng99/portfolio:${{ github.ref_name }}
