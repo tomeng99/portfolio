@@ -7,26 +7,18 @@ const projects = [
   {
     title: "Chatters",
     description:
-      "A real-time chat app built for fluid conversations across mobile and web experiences.",
-    tech: ["Node.js", "React Native", "PostgreSQL"],
-    href: "https://chat.eng.software",
-    linkLabel: "Visit project",
+      "A messenger app I built to learn how end-to-end encryption actually works — key exchange, NaCl boxes, group key distribution, and the cryptography that keeps messages private from the server itself.",
+    tech: ["React Native", "Node.js", "TweetNaCl", "PostgreSQL"],
+    href: "https://github.com/tomeng99/chatters",
+    linkLabel: "View on GitHub",
   },
   {
     title: "QuizGame",
     description:
-      "A multiplayer quiz experience focused on fast rounds, shared energy, and live competition.",
-    tech: ["Node.js", "React", "Realtime"],
-    href: "https://quiz.eng.software",
-    linkLabel: "Visit project",
-  },
-  {
-    title: "More coming soon",
-    description:
-      "New experiments, products, and workshop spin-offs are on the way. This space is reserved for what lands next.",
-    tech: ["AI", "Web", "Product"],
-    href: "#ai-findings",
-    linkLabel: "See lab notes",
+      "A live multiplayer quiz game built to explore how complex a platform like Kahoot really is — real-time scoring, cross-platform clients, and the infrastructure behind live competition.",
+    tech: ["Expo", "React Native", "Fastify", "Socket.IO"],
+    href: "https://github.com/tomeng99/QuizGame",
+    linkLabel: "View on GitHub",
   },
 ];
 
@@ -61,7 +53,7 @@ export function Projects() {
             Projects
           </p>
           <h2 className="text-3xl font-semibold tracking-tight text-zinc-50 sm:text-4xl">
-            Selected work and active ideas.
+            Built to understand how things work.
           </h2>
         </div>
 
@@ -70,7 +62,7 @@ export function Projects() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
+          className="grid gap-6 md:grid-cols-2"
         >
           {projects.map((project) => (
             <motion.article

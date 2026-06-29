@@ -18,15 +18,30 @@ export function About() {
             About
           </p>
           <h2 className="text-3xl font-semibold tracking-tight text-zinc-50 sm:text-4xl">
-            Developer, educator, and curious builder.
+            Developer, tinkerer, and relentless explorer of technology.
           </h2>
         </div>
-        <p className="max-w-2xl text-lg leading-8 text-zinc-300">
-          I&apos;m a developer based in Norway who builds things for the web,
-          runs workshops, and explores the cutting edge of AI. I enjoy turning
-          complex ideas into useful products and creating learning experiences
-          that help people move from curiosity to confidence.
-        </p>
+        <div className="max-w-2xl space-y-5 text-lg leading-8 text-zinc-300">
+          <p>
+            I&apos;m a developer based in Norway who loves exploring all kinds
+            of technology. I build things to understand how they really work
+            under the hood — whether that&apos;s end-to-end encryption,
+            real-time multiplayer systems, or self-hosted infrastructure.
+          </p>
+          <p>
+            As part of Telenor&apos;s student crew, I&apos;m an ambassador
+            for one of the Nordics&apos; largest telecom companies. I&apos;m also
+            deeply engaged in AI — setting up language models on-prem,
+            building security harnesses, and figuring out how to let agents
+            work autonomously without the permission fatigue of approving
+            every single action.
+          </p>
+          <p>
+            When I&apos;m not doing that, I&apos;m tinkering with Kubernetes
+            clusters — like the one running on this VPS that deploys and
+            hosts all my projects, including this portfolio.
+          </p>
+        </div>
       </div>
     </motion.section>
   );

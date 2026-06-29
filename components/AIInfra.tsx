@@ -1,33 +1,33 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bot, TerminalSquare, WandSparkles } from "lucide-react";
+import { Bot, ServerCog, ShieldCheck } from "lucide-react";
 
 const notes = [
   {
-    title: "Prompt patterns that reduce ambiguity",
+    title: "On-prem AI models",
     description:
-      "Notes from testing how tighter constraints, better examples, and clear success criteria change model outputs.",
-    icon: WandSparkles,
-  },
-  {
-    title: "Tool-using workflows for real tasks",
-    description:
-      "Experiments with chaining LLMs, terminal tools, and structured prompts into repeatable developer workflows.",
-    icon: TerminalSquare,
-  },
-  {
-    title: "Small models, sharp interfaces",
-    description:
-      "Observations on where lighter models shine when paired with good context, focused UI, and sensible guardrails.",
+      "Setting up and running language models on-premises — full control over data, no external API dependencies, and the infrastructure to serve them at usable speeds.",
     icon: Bot,
+  },
+  {
+    title: "Security harnesses for agents",
+    description:
+      "Building guardrails around AI agents so they can work autonomously without creating permission fatigue — the right balance of safety and flow, so you don't have to approve every single action.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Kubernetes on a VPS",
+    description:
+      "Running a self-hosted Kubernetes cluster on a VPS — the same setup that deploys and hosts all my projects, including this portfolio. Tinkering with the full pipeline from CI to production.",
+    icon: ServerCog,
   },
 ];
 
-export function AIFindings() {
+export function AIInfra() {
   return (
     <motion.section
-      id="ai-findings"
+      id="ai-infra"
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -37,10 +37,10 @@ export function AIFindings() {
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="mb-10 flex flex-col gap-3">
           <p className="text-sm font-medium tracking-[0.28em] text-zinc-500 uppercase">
-            AI Findings
+            AI &amp; Infrastructure
           </p>
           <h2 className="text-3xl font-semibold tracking-tight text-zinc-50 sm:text-4xl">
-            Lab notes from ongoing experiments.
+            What I&apos;m exploring right now.
           </h2>
         </div>
 
