@@ -6,9 +6,9 @@ import { useEffect, useState } from "react";
 const sections = [
   { id: "hero", label: "Home" },
   { id: "about", label: "About" },
+  { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
-  { id: "workshops", label: "Workshops" },
-  { id: "ai-findings", label: "AI Findings" },
+  { id: "ai-infra", label: "AI & Infra" },
 ];
 
 export function Nav() {
@@ -60,7 +60,7 @@ export function Nav() {
                 key={section.id}
                 href={`#${section.id}`}
                 aria-current={isActive ? "page" : undefined}
-                className={`rounded-full px-4 py-2 text-sm ${
+                className={`rounded-full px-4 py-2 text-sm whitespace-nowrap ${
                   isActive
                     ? "bg-white text-zinc-950"
                     : "text-zinc-400 hover:text-zinc-100"

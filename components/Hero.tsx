@@ -29,7 +29,7 @@ export function Hero() {
             transition={{ delay: 0.15, duration: 0.7 }}
             className="text-sm font-medium tracking-[0.36em] text-zinc-300 uppercase"
           >
-            Developer · Workshop Facilitator · AI Enthusiast
+            Developer · Tinkerer · AI Explorer
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
@@ -45,8 +45,8 @@ export function Hero() {
             transition={{ delay: 0.35, duration: 0.8 }}
             className="max-w-2xl text-lg leading-8 text-zinc-300 sm:text-xl"
           >
-            Building thoughtful digital products, leading hands-on workshops,
-            and experimenting with the practical edge of AI.
+            Exploring technology across the stack — from end-to-end encryption
+            to on-prem AI, from Kubernetes clusters to music education software.
           </motion.p>
         </div>
 
